@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <meta property="og:site_name" content="WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts" />
+  <meta property="og:title" content="WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
+
+  <meta property="article:publisher" content="" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts" />
+</head>
+
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"> WoCoCo: Learning Whole-Body Humanoid Control <br> with Sequential Contacts </h1>
+            <div class="is-size-4 publication-authors">
+              <span class="author-block">
+                <a href="https://zita-ch.github.io/">Chong Zhang</a>*&nbsp;&nbsp;
+                <a href="https://wenlixiao-cs.github.io/">Wenli Xiao</a>*&nbsp;&nbsp;
+                <a href="https://tairanhe.com/">Tairan He</a>&nbsp;&nbsp;
+                <a href="https://www.gshi.me/">Guanya Shi</a>&nbsp;&nbsp;
+                <br>*equal contributions
+              </span>
+            </div>
+   
+            </span></span>
+            <div class="column">
+                <image src="./static/images/logo.png" style="width: 40%;"></image>
+            </div>
+            <div class="is-size-4 publication-authors", style="margin-bottom: 0.5cm;">
+              In Submission
+            </div>
+            <!-- <div class="is-size-4 publication-authors">
+              <b style="color:rgb(255, 100, 100);">Best Systems Paper Award Finalist (top 3)</b>
+            </div> -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <!-- <span class="link-block">
+                  <a href="./resources/Robot_Parkour_Learning.pdf"
+                     class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span> -->
+                <!-- arXiv Link. -->
+                <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>Paper (TBD)</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- <section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Overview</h2>
+        <div class="content has-text-justified">
+          <div class="content has-text-justified">
+            <div class="column is-full-width is-centered has-text-centered">
+              <video controls autoplay loop muted playsinline src="./resources/method/wococo-intro.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<h2 class="title is-2" style="text-align: center;">Clap Dance</h2>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/3_dance/dance_leftright_clip1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/3_dance/dance_robust_clip1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/3_dance/dance_sim_clip2.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h2 class="title is-2" style="text-align: center;">Versatile Parkour Jumping</h2>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/1_jump/parkour_sim_clip1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/1_jump/parkour_sim_clip2.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;" height="20%"></video>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/1_jump/parkour_sim_clip3.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;" height="20%"></video>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/1_jump/parkour_cajun_clip1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/1_jump/parkour_cajun_robust_clip1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/1_jump/parkour_jump_clip1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/1_jump/parkour_jump_clip2.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h2 class="title is-2" style="text-align: center;">Bidirectional Cliff Traversal</h2>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/4_cliff/cliff_sim_clip1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/4_cliff/cliff_sim_clip2.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;" height="20%"></video>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/4_cliff/cliff_stable_clip1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/4_cliff/cliff_stable_clip2.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h2 class="title is-2" style="text-align: center;">Anywhere-to-Anywhere Loco-manipulation</h2>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/2_carry/carry_sim_clip1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/2_carry/carry_sim_clip2.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/2_carry/carry_any2any_clip1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/2_carry/carry_any2any_clip2.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;" height="20%"></video>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/2_carry/carry_any2any_robust_clip1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/2_carry/carry_stand_robust_clip1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <h2 class="title is-2" style="text-align: center;">Dino Loco-manipulation (Dribble Ball to Track "WoCoCo")</h2>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/6_dino/w1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/6_dino/o1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;" height="20%"></video>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/6_dino/c1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/6_dino/o2.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/6_dino/c2.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-full-width is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/6_dino/o3.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+      <div class="container">
+          <h2 class="title is-3 has-text-centered">Beyond humanoids: Dino Loco-manipulation (Dribble Ball to Track "WoCoCo")</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+              <div class="item item-steve">
+                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                      <source src="./resources/6_dino/w1.mp4" type="video/mp4">
+                  </video>
+                  <p class="caption">Video 1</p>
+              </div>
+              <div class="item item-steve">
+                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                      <source src="./resources/6_dino/o1.mp4" type="video/mp4">
+                  </video>
+                  <p class="caption">Video 2</p>
+              </div>
+              <div class="item item-chair-tp">
+                  <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+                      <source src="./resources/6_dino/c1.mp4" type="video/mp4">
+                  </video>
+                  <p class="caption">Video 3</p>
+              </div>
+              <div class="item item-chair-tp">
+                  <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+                      <source src="./resources/6_dino/o2.mp4" type="video/mp4">
+                  </video>
+                  <p class="caption">Video 4</p>
+              </div>
+              <div class="item item-shiba">
+                  <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+                      <source src="./resources/6_dino/c2.mp4" type="video/mp4">
+                  </video>
+                  <p class="caption">Video 5</p>
+              </div>
+              <div class="item item-shiba">
+                  <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+                      <source src="./resources/6_dino/o3.mp4" type="video/mp4">
+                  </video>
+                  <p class="caption">Video 6</p>
+              </div>
+          </div>
+          <p style="text-align: center;">
+              The dino is manipulating the ball with different end-effectors: Left front foot, Right front foot, left rear foot, right rear foot, head, and tail.
+          </p>
+      </div>
+  </div>
+</section>
+
+
+
+</body>
+</html>
