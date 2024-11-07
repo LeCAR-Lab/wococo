@@ -26,10 +26,37 @@ CoRL 2024 (oral)
 ## Quick Start
 
 ### Install
-Similar to basic legged-gym based codebase, the install pipeline is:
+> **Note**: Before running our code, it's highly recommended to first play with [RSL's Legged Gym version](https://github.com/leggedrobotics/legged_gym) to get a basic understanding of the Isaac-LeggedGym-RslRL framework.
 
-1. install isaac gym
-2. install packages
+Similar to basic legged-gym based codebase, the install pipeline is:
+1. Create environment and install torch
+
+   ```text
+   conda create -n omnih2o python=3.8 
+   pip3 install torch torchvision torchaudio 
+   ```
+
+   
+
+2. Install Isaac Gym preview 4 release https://developer.nvidia.com/isaac-gym
+
+   unzip files to a folder, then install with pip:
+
+   `cd isaacgym/python && pip install -e .`
+
+   check it is correctly installed by playing: 
+
+   ```cmd
+   cd examples && python 1080_balls_of_solitude.py
+   ```
+
+3. Clone our repo
+    
+    ```
+
+    ```
+
+4. install packages
     ```
     pip install -r requirements.txt
     ```
