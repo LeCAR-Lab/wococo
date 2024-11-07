@@ -53,7 +53,7 @@ Similar to basic legged-gym based codebase, the install pipeline is:
 3. Clone our repo
     
     ```
-
+    git clone git@github.com:LeCAR-Lab/wococo.git
     ```
 
 4. install packages
