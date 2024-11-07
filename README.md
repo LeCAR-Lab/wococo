@@ -73,6 +73,7 @@ Similar to basic legged-gym based codebase, the install pipeline is:
 ### Play
 
 - go to `legged_gym/legged_gym`
+  
     ```
     python scripts/play.py --task=h1:jumpjack --num_envs=3
     ```
