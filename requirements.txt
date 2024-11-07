@@ -1,0 +1,38 @@
+--find-links https://download.pytorch.org/whl/cu113/torch_stable.html
+
+trimesh
+setuptools==59.5.0
+numpy-stl
+vtk
+patchelf
+termcolor
+torchgeometry
+scikit-image
+numpy==1.23.0
+scipy
+ipdb
+opencv-python==4.6.0.66
+tqdm 
+pyyaml
+wandb
+scikit-image
+gym
+lxml
+autograd
+scikit-learn
+chumpy
+rl-games==1.1.4
+wandb
+pyvirtualdisplay
+lxml
+ipdb
+chardet
+cchardet
+imageio-ffmpeg
+easydict
+open3d
+gdown
+rich
+pynput
+-e rsl_rl
+-e legged_gym
