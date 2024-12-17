@@ -1,0 +1,33 @@
+# 
+policy_path: "{LEGGED_GYM_ROOT_DIR}/logs/h1:jjack/exported/policies/24_12_09_12-01-45_model_25800.pt"
+xml_path: "{LEGGED_GYM_ROOT_DIR}/resources/robots/h1/xml/scene.xml"
+# Total simulation time
+simulation_duration: 60.0
+# Simulation time step
+simulation_dt: 0.005
+# Controller update frequency (meets the requirement of simulation_dt * controll_decimation=0.02; 50Hz)
+control_decimation: 4
+
+kps: [200, 200, 200, 300, 40,  200, 200, 200, 300, 40,300,100,100,100,100,100,100,100,100]
+kds: [5, 5, 5, 6, 2,  5, 5, 5, 6, 2,6,2,2,2,2,2,2,2,2]
+
+default_angles: [0,  0.0,  -0.4 ,  0.8, -0.4,
+                 0,  0.0,  -0.4,  0.8, -0.4,
+                 0,  
+                 0.0,  0.0,  0.0, 0.0,
+                 0.0,  0.0,  0.0, 0.0]
+
+ang_vel_scale: 1.0
+lin_vel_scale: 1.0
+dof_pos_scale: 1.0
+dof_vel_scale: 1.0
+action_scale: 0.25
+num_actions: 19
+num_obs: 187
+
+joint_hist_len: 5
+clip_observations: 100
+clip_actions: 100
+
+##########
+

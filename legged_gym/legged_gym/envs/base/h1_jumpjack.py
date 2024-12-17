@@ -157,6 +157,13 @@ class H1JumpJack(LeggedRobot):
         """
         #todo: deal with 4 ee
         self.phase =  self.contact_sequence[torch.arange(self.num_envs), :, self.current_contact_goal[:,0]].float()
+        print('self.contact_sequence:', self.contact_sequence)
+        print('self.contact_sequence.shape:', self.contact_sequence.shape)
+        print('self.current_contact_goal[:,0]:',self.current_contact_goal[:,0])
+        print('self.phase:', self.phase)
+
+        # print('self.dof_bias', self.dof_bias)
+
         self.obs_buf = torch.cat((  
                                     (self.dof_pos - self.dof_bias) * self.obs_scales.dof_pos, # 19
                                     self.dof_vel * self.obs_scales.dof_vel, # 19
@@ -169,8 +176,13 @@ class H1JumpJack(LeggedRobot):
                                     self.joint_hist[:,1,:], # 57
                                     self.joint_hist[:,2,:], # 57
                                     ),dim=-1)
+        
+        
                     
         obs_buf_denoise = self.obs_buf.clone()
+
+        # print('h1_jumpjack self.obs_buf.shape', self.obs_buf.shape)
+        # print('h1_jumpjack self.base_lin_vel * self.obs_scales.lin_vel', self.base_lin_vel * self.obs_scales.lin_vel)
         
         # add noise if needed
         if self.add_noise:

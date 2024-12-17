@@ -78,6 +78,17 @@ Similar to basic legged-gym based codebase, the install pipeline is:
     python scripts/play.py --task=h1:jumpjack --num_envs=3
     ```
 
+
+### Sim2sim
+
+- go to `legged_gym/legged_gym`
+  
+    ```
+    python scripts/sim2sim.py h1.yaml
+    ```
+
+
+
 ## Note
 
 Since our framework is quite intuitive and we *de-engineered* a lot of things, (i.e., we do not use certain engineering tricks that can be applied to specific tasks such as terrain curriculum) to showcase the framework's capability, we provide a clap-and-dance example here for the reward and MDP implementations, and encourage anyone to engineer the specific environments for better performance on their own applications.

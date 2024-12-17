@@ -80,6 +80,7 @@ def play(args):
     [0, 1,0,0],
     [0, 0,0,1]]
         env.contact_sequence[0,:,:] = torch.tensor(dance_steps).to(env.device).repeat(1,25)
+        print('Dance sequence:', env.contact_sequence[0])
         env.period_contact[0] = 0.4
 
     logger = Logger(env.dt)
@@ -133,6 +134,7 @@ def play(args):
         # actions[:, 15:16] += 10.
         # print(actions)
         obs, rews, dones, infos = env.step(actions.detach())
+        # print('obs.shape', obs.shape)
         if groupdance:
             obs[1:,47:51]= obs[0,47:51].clone().unsqueeze(0)
             left = obs[1:4,[47,49]]

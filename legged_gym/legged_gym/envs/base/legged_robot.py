@@ -789,6 +789,7 @@ class LeggedRobot(BaseTask):
                 if self.cfg.control.control_type in ["P", "V"]:
                     print(f"PD gain of joint {name} were not defined, setting them to zero")
         self.default_dof_pos = self.default_dof_pos.unsqueeze(0)
+        print('Default joint angles:', self.default_dof_pos)
         self.forward_vec = to_torch([1., 0., 0.], device=self.device).repeat((self.num_envs, 1))
         
         self.dof_bias = torch.zeros(self.num_envs, self.num_dof, device=self.device)
@@ -1007,6 +1008,10 @@ class LeggedRobot(BaseTask):
 
     def _parse_cfg(self, cfg):
         self.dt = self.cfg.control.decimation * self.sim_params.dt
+        print('Decimation:', self.cfg.control.decimation)
+        print('Simulation dt:', self.sim_params.dt)
+        print('Control dt:', self.dt)
+        
         self.obs_scales = self.cfg.normalization.obs_scales
         self.reward_scales = class_to_dict(self.cfg.rewards.scales)
         self.command_ranges = class_to_dict(self.cfg.commands.ranges)

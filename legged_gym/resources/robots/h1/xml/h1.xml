@@ -1,5 +1,5 @@
 <mujoco model="h1_description">
-  <compiler angle="radian" meshdir="meshes/" autolimits="true" />
+  <compiler angle="radian" meshdir="../meshes/" autolimits="true" />
   <statistic meansize="0.219715" extent="1.9996" center="0.015564 2.74848e-06 -0.169929" />
   <asset>
     <mesh name="pelvis" file="pelvis.STL" />
